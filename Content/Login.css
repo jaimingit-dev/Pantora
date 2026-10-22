@@ -1,0 +1,737 @@
+/* ==========================================================================
+   PANTORA ATELIER - LUXURY LOGIN & REGISTRATION STYLES
+   Exact Figma Replication & Responsive Luxury Theme
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --color-bg: #F9F9F9;
+    --color-card-bg: #FFFFFF;
+    --color-muted-bg: #F3F3F3;
+    --color-muted-bg-hover: #ECECEC;
+    --color-primary: #000000;
+    --color-primary-hover: #222222;
+    --color-accent: #C08054;
+    --color-accent-dark: #A5683F;
+    --color-text-dark: #111111;
+    --color-text-body: #5A5D61;
+    --color-text-muted: #737576;
+    --color-text-light: #9CA3AF;
+    --color-border: #E5E7EB;
+    --color-border-subtle: #ECECEC;
+    --color-input-border: #DFE1E5;
+    --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --radius-subtle: 2px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    background-color: var(--color-bg);
+    color: var(--color-text-dark);
+    font-family: var(--font-main);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Page Wrapper */
+.atelier-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-bg);
+}
+
+/* --------------------------------------------------------------------------
+   Top Navigation Bar
+   -------------------------------------------------------------------------- */
+.atelier-header {
+    width: 100%;
+    height: 64px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid var(--color-border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.atelier-logo {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.26em;
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.atelier-logo:hover {
+    opacity: 0.85;
+}
+
+.pantora-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    margin-left: 7px;
+    vertical-align: middle;
+    position: relative;
+    top: -0.5px;
+}
+
+/* --------------------------------------------------------------------------
+   Main Content Area
+   -------------------------------------------------------------------------- */
+.atelier-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 44px 20px 48px;
+    width: 100%;
+}
+
+/* Upper Branding Badge */
+.atelier-badge {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.atelier-badge-title {
+    display: inline-flex;
+    align-items: center;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.atelier-badge-sub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.atelier-badge-sub .rule-line {
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background-color: #D3D5D8;
+}
+
+.atelier-badge-sub .rule-text {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Center Card
+   -------------------------------------------------------------------------- */
+.atelier-card {
+    width: 100%;
+    max-width: 440px;
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-subtle);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Tabs */
+.atelier-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 48px;
+    background-color: var(--color-muted-bg);
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.atelier-tab-btn {
+    border: none;
+    background: var(--color-muted-bg);
+    color: var(--color-text-muted);
+    font-family: var(--font-main);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    user-select: none;
+    padding: 0 12px;
+}
+
+.atelier-tab-btn:hover {
+    background-color: var(--color-muted-bg-hover);
+    color: var(--color-text-dark);
+}
+
+.atelier-tab-btn.active {
+    background-color: #FFFFFF;
+    color: var(--color-text-dark);
+    cursor: default;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.tab-dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+/* Card Body */
+.atelier-card-body {
+    padding: 34px 36px 28px;
+}
+
+.form-panel {
+    display: none;
+}
+
+.form-panel.active {
+    display: block;
+    animation: fadeIn 0.25s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(2px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.atelier-card-title {
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-text-dark);
+    margin-bottom: 24px;
+    line-height: 1.25;
+}
+
+.atelier-card-subtitle {
+    font-size: 13px;
+    color: var(--color-text-body);
+    line-height: 1.45;
+    margin-bottom: 26px;
+}
+
+/* Form Controls */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-label {
+    display: block;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.form-control {
+    width: 100%;
+    height: 42px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-input-border);
+    border-radius: var(--radius-subtle);
+    padding: 0 14px;
+    font-family: var(--font-main);
+    font-size: 13px;
+    color: var(--color-text-dark);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-control::placeholder {
+    color: #A3A7AD;
+    font-size: 12.5px;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #111111;
+    box-shadow: 0 0 0 1px #111111;
+}
+
+.form-control.input-error {
+    border-color: #D32F2F !important;
+    background-color: #FFF9F9 !important;
+    box-shadow: 0 0 0 1px #D32F2F !important;
+}
+
+.field-error-text {
+    font-size: 11.5px;
+    font-weight: 500;
+    color: #D32F2F;
+    margin-top: 4px;
+    line-height: 1.35;
+    animation: fadeInError 0.18s ease-in-out;
+}
+
+span.field-error-text[style*="inline"], 
+span.field-error-text.visible {
+    display: block !important;
+}
+
+@keyframes fadeInError {
+    from { opacity: 0; transform: translateY(-2px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-row-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+/* Checkbox and Agreement */
+.agreement-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 24px;
+    user-select: none;
+}
+
+.custom-checkbox-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.custom-checkbox-box {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #CFD3D8;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    margin-top: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+}
+
+.custom-checkbox-input:checked + .custom-checkbox-box {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.custom-checkbox-input:checked + .custom-checkbox-box::after {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-top: -2px;
+}
+
+.custom-checkbox-input:focus + .custom-checkbox-box {
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.agreement-label {
+    font-size: 11.5px;
+    color: var(--color-text-body);
+    line-height: 1.45;
+    cursor: pointer;
+}
+
+.terms-link {
+    color: var(--color-text-dark);
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.15s ease;
+}
+
+.terms-link:hover {
+    color: var(--color-accent);
+}
+
+/* Form Helper Row (Remember me & Forgot Password) */
+.form-helper-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px;
+    margin-bottom: 22px;
+}
+
+.remember-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11.5px;
+    color: var(--color-text-body);
+    cursor: pointer;
+}
+
+.forgot-link {
+    font-size: 11.5px;
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.15s ease;
+}
+
+.forgot-link:hover {
+    color: var(--color-accent-dark);
+    text-decoration: underline;
+}
+
+/* Primary Action Button */
+.btn-primary-atelier {
+    width: 100%;
+    height: 46px;
+    background-color: var(--color-primary);
+    color: #FFFFFF !important;
+    border: none;
+    border-radius: var(--radius-subtle);
+    font-family: var(--font-main);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    text-decoration: none !important;
+    transition: background-color 0.18s ease, transform 0.1s ease;
+}
+
+.btn-primary-atelier,
+.btn-primary-atelier:link,
+.btn-primary-atelier:visited,
+.btn-primary-atelier:hover,
+.btn-primary-atelier:focus,
+.btn-primary-atelier:active,
+.btn-primary-atelier span {
+    text-decoration: none !important;
+    color: #FFFFFF !important;
+}
+
+.btn-primary-atelier:hover {
+    background-color: var(--color-primary-hover);
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+.btn-primary-atelier:active {
+    transform: scale(0.99);
+}
+
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Switch Mode Link */
+.switch-mode-container {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.switch-mode-link {
+    color: var(--color-accent);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 4px;
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+
+.switch-mode-link:hover {
+    color: var(--color-accent-dark);
+    text-decoration: underline;
+}
+
+/* Administrator Switch Banner */
+.admin-switch-banner {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px dashed #E5E7EB;
+    text-align: center;
+    font-size: 12px;
+    color: var(--color-text-body);
+}
+
+.admin-switch-link {
+    color: #C08054;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.15s ease;
+    margin-left: 3px;
+}
+
+.admin-switch-link:hover {
+    color: #9A5A30;
+    text-decoration: underline;
+}
+
+/* Feedback / Alert */
+.atelier-alert {
+    display: none;
+    padding: 10px 14px;
+    border-radius: var(--radius-subtle);
+    font-size: 12px;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.atelier-alert.success {
+    display: block;
+    background-color: #ECFDF5;
+    border: 1px solid #A7F3D0;
+    color: #065F46;
+}
+
+.atelier-alert.error {
+    display: block;
+    background-color: #FEF2F2;
+    border: 1px solid #FECACA;
+    color: #991B1B;
+}
+
+/* --------------------------------------------------------------------------
+   Patron Privileges Banner (Card Footer)
+   -------------------------------------------------------------------------- */
+.atelier-privileges {
+    background-color: var(--color-muted-bg);
+    border-top: 1px solid var(--color-border-subtle);
+    padding: 18px 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.privilege-icon-wrap {
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.privilege-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    color: var(--color-accent);
+}
+
+.privilege-content {
+    flex: 1;
+}
+
+.privilege-title {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.privilege-desc {
+    font-size: 11px;
+    color: var(--color-text-body);
+    line-height: 1.45;
+}
+
+/* --------------------------------------------------------------------------
+   Assistance Links below Card
+   -------------------------------------------------------------------------- */
+.atelier-assistance {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--color-text-muted);
+}
+
+.atelier-assistance .assist-link {
+    color: var(--color-text-dark);
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.15s ease;
+}
+
+.atelier-assistance .assist-link:hover {
+    color: var(--color-accent);
+}
+
+.dot-separator {
+    margin: 0 5px;
+    color: #A0A5AA;
+}
+
+/* --------------------------------------------------------------------------
+   Page Footer
+   -------------------------------------------------------------------------- */
+.atelier-footer {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-top: 1px solid var(--color-border-subtle);
+    padding: 18px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: var(--color-text-muted);
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-nav a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--color-text-dark);
+}
+
+.footer-copy {
+    color: var(--color-text-muted);
+}
+
+/* Modal Popup for Terms / Support */
+.atelier-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(2px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.atelier-modal-overlay.active {
+    display: flex;
+}
+
+.atelier-modal {
+    background: #FFFFFF;
+    width: 100%;
+    max-width: 480px;
+    border-radius: var(--radius-subtle);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    position: relative;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #737576;
+    cursor: pointer;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #111;
+}
+
+.modal-body {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .atelier-main {
+        padding: 24px 16px 36px;
+    }
+
+    .atelier-card-body {
+        padding: 26px 20px 22px;
+    }
+
+    .form-row-2col {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .atelier-footer {
+        padding: 16px 20px;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .footer-nav {
+        justify-content: center;
+    }
+}

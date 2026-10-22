@@ -1,0 +1,27 @@
+## =========================================================================
+## Pantora Atelier - Visual Studio & ASP.NET .gitignore
+## =========================================================================
+
+# Visual Studio temporary files and workspace caches
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build outputs (VS will recompile automatically on F5 / Build)
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# SQL Server transaction logs & runtime locks (mdf is retained, ldf is recreated automatically)
+*.ldf
+
+# Temporary files and logs
+*.log
+*.tmp
+*.bak
+*.cache

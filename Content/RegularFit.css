@@ -1,0 +1,739 @@
+/* ==========================================================================
+   PANTORA REGULAR FIT - CATALOG & ARCHITECTURE STYLES
+   Exact Figma Replication for Regular Fit Trousers Page
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --color-bg: #FFFFFF;
+    --color-light-bg: #F7F7F7;
+    --color-gray-banner: #F6F6F6;
+    --color-card-border: #EBEBEB;
+    --color-border-subtle: #ECECEC;
+    --color-primary: #000000;
+    --color-primary-hover: #222222;
+    --color-accent: #C08054;
+    --color-text-dark: #111111;
+    --color-text-body: #555555;
+    --color-text-muted: #737576;
+    --color-text-light: #9CA3AF;
+    --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --radius-subtle: 2px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: var(--color-text-dark);
+    font-family: var(--font-main);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+}
+
+.catalog-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* --------------------------------------------------------------------------
+   Breadcrumb
+   -------------------------------------------------------------------------- */
+.breadcrumb-bar {
+    padding: 24px 0 16px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+}
+
+.breadcrumb-bar a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.breadcrumb-bar a:hover {
+    color: var(--color-text-dark);
+}
+
+.breadcrumb-sep {
+    margin: 0 8px;
+    color: #C0C4CC;
+}
+
+.breadcrumb-current {
+    color: var(--color-text-dark);
+}
+
+/* --------------------------------------------------------------------------
+   Page Header
+   -------------------------------------------------------------------------- */
+.catalog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.catalog-badge {
+    display: inline-block;
+    background-color: #F2F2F2;
+    padding: 4px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #333333;
+    border-radius: var(--radius-subtle);
+    margin-bottom: 10px;
+}
+
+.catalog-title {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.catalog-subtitle {
+    font-size: 13.5px;
+    color: var(--color-text-body);
+    max-width: 540px;
+    line-height: 1.5;
+}
+
+.catalog-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.filter-pill {
+    background-color: #F8F8F8;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--radius-subtle);
+    padding: 8px 14px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--color-text-dark);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+
+.filter-pill:hover {
+    background-color: #EEEEEE;
+}
+
+.filter-pill .pill-close {
+    font-size: 11px;
+    color: #999999;
+    margin-left: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Spec Strip (Architectural Specifications)
+   -------------------------------------------------------------------------- */
+.fit-spec-strip {
+    background-color: var(--color-gray-banner);
+    border-radius: var(--radius-subtle);
+    padding: 18px 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 44px;
+}
+
+.fit-spec-col {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.fit-spec-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.fit-spec-val {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+.sort-select {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--radius-subtle);
+    padding: 8px 16px;
+    font-family: var(--font-main);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--color-text-dark);
+    cursor: pointer;
+    outline: none;
+}
+
+/* --------------------------------------------------------------------------
+   Product Grid (3 Columns)
+   -------------------------------------------------------------------------- */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 28px;
+    row-gap: 48px;
+    margin-bottom: 64px;
+}
+
+.catalog-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.catalog-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 284 / 378;
+    background-color: #F2F2F2;
+    overflow: hidden;
+    border-radius: var(--radius-subtle);
+    margin-bottom: 14px;
+}
+
+.catalog-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    transition: transform 0.35s ease;
+}
+
+.catalog-card:hover .catalog-img {
+    transform: scale(1.03);
+}
+
+.catalog-fit-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #FFFFFF;
+    padding: 5px 12px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #111111;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    z-index: 2;
+    pointer-events: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.catalog-fit-badge.badge-baggy {
+    background-color: #111111;
+    color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   Wishlist Heart Button
+   -------------------------------------------------------------------------- */
+.wishlist-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.18s ease, background-color 0.18s ease;
+    z-index: 5;
+    padding: 0;
+}
+
+.wishlist-btn:hover {
+    transform: scale(1.08);
+    background-color: #FAFAFA;
+}
+
+.wishlist-btn .heart-icon {
+    width: 16px;
+    height: 16px;
+    color: #111111;
+    stroke: #111111;
+    fill: none;
+    transition: fill 0.2s ease, stroke 0.2s ease, transform 0.2s ease;
+}
+
+.wishlist-btn.active .heart-icon {
+    fill: #E53E3E;
+    stroke: #E53E3E;
+    animation: heartBeat 0.3s ease-in-out;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+/* Meta Footer for Cards (Sizes & Highlights) */
+.catalog-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #888888;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.meta-status-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.meta-status-dot.status-available {
+    background-color: #2D3748;
+}
+
+.meta-tag-accent {
+    color: #C08054;
+    font-weight: 700;
+}
+
+.catalog-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3px;
+}
+
+.catalog-product-name {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    line-height: 1.3;
+}
+
+.catalog-product-price {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+.catalog-fabric-meta {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    margin-bottom: 6px;
+}
+
+.catalog-specs-meta {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #888888;
+    text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Alterations Banner
+   -------------------------------------------------------------------------- */
+.alterations-strip {
+    background-color: var(--color-gray-banner);
+    border-radius: var(--radius-subtle);
+    padding: 24px 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 56px;
+}
+
+.alterations-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.alterations-icon {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+    color: #111111;
+}
+
+.alterations-title {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 2px;
+}
+
+.alterations-desc {
+    font-size: 12.5px;
+    color: var(--color-text-body);
+}
+
+.btn-alterations-guide {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 10px 22px;
+    font-family: var(--font-main);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: var(--radius-subtle);
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.18s ease;
+}
+
+.btn-alterations-guide:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* --------------------------------------------------------------------------
+   3 Pillars of Regular Fit
+   -------------------------------------------------------------------------- */
+.pillars-section {
+    padding: 48px 0 56px;
+    border-top: 1px solid var(--color-border-subtle);
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+}
+
+.pillar-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.pillar-step {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.pillar-title {
+    font-size: 13.5px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.pillar-desc {
+    font-size: 12.5px;
+    color: var(--color-text-body);
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Footer & Pagination Pill (Exact Match to Figma Reference)
+   -------------------------------------------------------------------------- */
+.pantora-footer {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-top: 1px solid var(--color-border-subtle);
+    padding: 20px 0;
+    font-size: 11.5px;
+    color: var(--color-text-muted);
+}
+
+.footer-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 11.5px;
+    transition: color 0.15s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-text-dark);
+}
+
+.dot-separator {
+    color: #C0C4CC;
+    font-size: 12px;
+}
+
+.footer-copy {
+    color: var(--color-text-muted);
+    font-size: 11.5px;
+}
+
+/* --------------------------------------------------------------------------
+   Card variation for Pillars (Slim Fit Figma Reference)
+   -------------------------------------------------------------------------- */
+.pillars-grid.pillars-cards .pillar-col {
+    background-color: var(--color-gray-banner);
+    border-radius: var(--radius-subtle);
+    padding: 28px 30px;
+}
+
+.pillar-step.accent-copper {
+    color: var(--color-accent);
+}
+
+/* --------------------------------------------------------------------------
+   Luxury Toast Notification
+   -------------------------------------------------------------------------- */
+.atelier-toast {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #111111;
+    color: #FFFFFF;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    z-index: 9999;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.atelier-toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Korean Fit Specific Styles
+   -------------------------------------------------------------------------- */
+.korean-filter-tabs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+}
+
+.korean-tab-btn {
+    background-color: #F4F4F4;
+    border: 1px solid transparent;
+    border-radius: var(--radius-subtle);
+    padding: 8px 16px;
+    font-family: var(--font-main);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #444444;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    text-transform: uppercase;
+}
+
+.korean-tab-btn:hover {
+    background-color: #EAEAEA;
+    color: #111111;
+}
+
+.korean-tab-btn.active {
+    background-color: #000000;
+    color: #FFFFFF;
+    border-color: #000000;
+}
+
+.stock-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.stock-tag.stock-in {
+    color: #C08054;
+}
+
+.stock-tag.stock-low {
+    color: #C08054;
+}
+
+.stock-tag.stock-bespoke {
+    color: #718096;
+}
+
+.stock-tag.stock-new {
+    color: #10B981;
+}
+
+.korean-sizes {
+    font-size: 11px;
+    color: #777777;
+    letter-spacing: 0.05em;
+}
+
+.korean-sizes strong {
+    color: #111111;
+}
+
+.alterations-banner {
+    background-color: #F7F7F7;
+    border: 1px solid #EBEBEB;
+    border-radius: var(--radius-subtle);
+    padding: 32px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-top: 20px;
+    margin-bottom: 56px;
+}
+
+.alterations-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.alterations-icon-box {
+    width: 44px;
+    height: 44px;
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.alterations-pretitle {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 4px;
+}
+
+.alterations-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+}
+
+.alterations-desc {
+    font-size: 12.5px;
+    color: var(--color-text-body);
+    line-height: 1.45;
+}
+
+.btn-solid-black {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    border-radius: var(--radius-subtle);
+    padding: 12px 24px;
+    font-family: var(--font-main);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-solid-black:hover {
+    background-color: #262626;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    .alterations-strip {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+    .catalog-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}

@@ -1,0 +1,544 @@
+/* ==========================================================================
+   PANTORA PRODUCT DETAIL PAGE (PDP) STYLES
+   Exact Atelier Luxury E-Commerce Architecture
+   ========================================================================== */
+
+.pdp-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+}
+
+.pdp-layout {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
+    align-items: start;
+    margin-top: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   Left Column: Gallery
+   -------------------------------------------------------------------------- */
+.pdp-gallery-wrap {
+    position: sticky;
+    top: 90px;
+}
+
+.pdp-main-image-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background-color: #F6F6F6;
+    border-radius: var(--radius-subtle);
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.pdp-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    transition: transform 0.4s ease, opacity 0.2s ease;
+}
+
+.pdp-main-image-box:hover .pdp-main-img {
+    transform: scale(1.02);
+}
+
+.pdp-fit-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #FFFFFF;
+    color: #111111;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.pdp-zoom-btn {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #111111;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+    z-index: 2;
+}
+
+.pdp-zoom-btn:hover {
+    background-color: #FAFAFA;
+    transform: scale(1.06);
+}
+
+/* Thumbnails */
+.pdp-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.pdp-thumb-item {
+    aspect-ratio: 4 / 5;
+    background-color: #F4F4F4;
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: border-color 0.15s ease, opacity 0.15s ease;
+}
+
+.pdp-thumb-item:hover {
+    opacity: 0.9;
+}
+
+.pdp-thumb-item.active {
+    border-color: #111111;
+    box-shadow: 0 0 0 1px #111111;
+}
+
+.pdp-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Right Column: Product Details & Controls
+   -------------------------------------------------------------------------- */
+.pdp-details {
+    padding-top: 4px;
+}
+
+.pdp-collection-tag {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: #C08054;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.pdp-title {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #111111;
+    line-height: 1.18;
+    margin-bottom: 12px;
+}
+
+.pdp-price-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.pdp-price-current {
+    font-size: 24px;
+    font-weight: 800;
+    color: #111111;
+}
+
+.pdp-price-strike {
+    font-size: 16px;
+    color: #999999;
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+.pdp-discount-tag {
+    background-color: #FFF2EA;
+    color: #C08054;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+}
+
+.pdp-taxes-note {
+    font-size: 11.5px;
+    color: #777777;
+    margin-bottom: 20px;
+}
+
+/* Fit Callout Strip */
+.pdp-fit-callout {
+    background-color: #F8F8F8;
+    border-left: 3px solid #111111;
+    padding: 10px 14px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    border-radius: 0 2px 2px 0;
+}
+
+.pdp-description {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 24px;
+}
+
+/* Color Swatches */
+.pdp-color-section {
+    margin-bottom: 22px;
+}
+
+.pdp-color-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #111111;
+    margin-bottom: 10px;
+}
+
+.pdp-color-meta {
+    font-size: 11px;
+    color: #888888;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.pdp-swatches-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pdp-swatch-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 0 0 1px #D5D5D5;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pdp-swatch-circle:hover {
+    transform: scale(1.1);
+}
+
+.pdp-swatch-circle.active {
+    box-shadow: 0 0 0 2px #111111;
+}
+
+/* Size Selection */
+.pdp-size-section {
+    margin-bottom: 24px;
+}
+
+.pdp-size-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pdp-size-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #111111;
+}
+
+.pdp-sizeguide-link {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #C08054;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+
+.pdp-sizeguide-link:hover {
+    color: #9E5F36;
+}
+
+.pdp-sizes-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.pdp-size-btn {
+    background-color: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    border-radius: 2px;
+    padding: 10px 4px;
+    text-align: center;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    color: #111111;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.pdp-size-btn span.size-code {
+    font-size: 11.5px;
+    font-weight: 800;
+}
+
+.pdp-size-btn span.size-inch {
+    font-size: 10px;
+    color: #777777;
+    font-weight: 500;
+}
+
+.pdp-size-btn:hover {
+    border-color: #111111;
+}
+
+.pdp-size-btn.active {
+    background-color: #000000;
+    border-color: #000000;
+    color: #FFFFFF;
+}
+
+.pdp-size-btn.active span.size-inch {
+    color: #CCCCCC;
+}
+
+.pdp-stock-notice {
+    font-size: 11px;
+    font-weight: 600;
+    color: #C08054;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Purchase Row */
+.pdp-purchase-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+    margin-bottom: 28px;
+}
+
+.pdp-qty-stepper {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #D5D5D5;
+    border-radius: 2px;
+    height: 48px;
+    background-color: #F8F8F8;
+    overflow: hidden;
+}
+
+.pdp-qty-btn {
+    width: 38px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #111111;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.pdp-qty-btn:hover {
+    background-color: #EAEAEA;
+}
+
+.pdp-qty-val {
+    width: 32px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #111111;
+}
+
+.pdp-btn-add {
+    flex: 1;
+    height: 48px;
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.pdp-btn-add:hover {
+    background-color: #222222;
+}
+
+.pdp-btn-add:active {
+    transform: scale(0.99);
+}
+
+.pdp-wishlist-toggle {
+    width: 48px;
+    height: 48px;
+    background-color: #F8F8F8;
+    border: 1px solid #E0E0E0;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.18s ease, transform 0.18s ease;
+    flex-shrink: 0;
+}
+
+.pdp-wishlist-toggle:hover {
+    background-color: #EFEFEF;
+    transform: scale(1.05);
+}
+
+.pdp-wishlist-toggle .heart-icon {
+    width: 18px;
+    height: 18px;
+    color: #111111;
+    fill: none;
+    transition: fill 0.2s ease, color 0.2s ease;
+}
+
+.pdp-wishlist-toggle.active .heart-icon {
+    fill: #E53E3E;
+    stroke: #E53E3E;
+}
+
+/* Trust / Value Props Box */
+.pdp-trust-box {
+    background-color: #F8F8F8;
+    border: 1px solid #EBEBEB;
+    border-radius: 2px;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.pdp-trust-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 12px;
+    color: #555555;
+    line-height: 1.45;
+}
+
+.pdp-trust-item svg {
+    color: #C08054;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.pdp-trust-item strong {
+    color: #111111;
+}
+
+/* Collapsible Accordions */
+.pdp-accordions {
+    border-top: 1px solid #ECECEC;
+}
+
+.pdp-accordion-item {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.pdp-accordion-header {
+    width: 100%;
+    padding: 16px 0;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: inherit;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #111111;
+    cursor: pointer;
+    text-align: left;
+}
+
+.pdp-accordion-icon {
+    font-size: 14px;
+    color: #888888;
+    transition: transform 0.2s ease;
+}
+
+.pdp-accordion-item.active .pdp-accordion-icon {
+    transform: rotate(180deg);
+}
+
+.pdp-accordion-body {
+    display: none;
+    padding-bottom: 18px;
+    font-size: 12.5px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.pdp-accordion-item.active .pdp-accordion-body {
+    display: block;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .pdp-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+    .pdp-gallery-wrap {
+        position: static;
+    }
+}
